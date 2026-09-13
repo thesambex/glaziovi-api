@@ -1,0 +1,16 @@
+/.idea
+/.vs
+
+*.DotSettings.user
+
+# Saída de build centralizada pelo Directory.Build.props
+/artifacts
+
+# Rede de segurança: bin/obj só reaparecem se alguém sobrescrever o ArtifactsPath
+Bin/
+Obj/
+
+# Resultados de teste e cobertura
+TestResults/
+*.coverage
+*.trx

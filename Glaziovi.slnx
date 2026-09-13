@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Glaziovi.Core/Glaziovi.Core.csproj" />
+    <Project Path="src/Glaziovi.Database/Glaziovi.Database.csproj" />
+    <Project Path="src/Glaziovi.Infrastructure/Glaziovi.Infrastructure.csproj" />
+    <Project Path="src/Glaziovi.Keycloak/Glaziovi.Keycloak.csproj" />
+    <Project Path="src/Glaziovi.Modules/Glaziovi.Modules.csproj" />
+    <Project Path="src/Glaziovi.Web/Glaziovi.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Glaziovi.IntegrationTests/Glaziovi.IntegrationTests.csproj" />
+    <Project Path="tests/Glaziovi.UnitTests/Glaziovi.UnitTests.csproj" />
+  </Folder>
+</Solution>
