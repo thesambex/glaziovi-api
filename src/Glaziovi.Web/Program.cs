@@ -1,4 +1,5 @@
 using Glaziovi.Web;
+using Glaziovi.Web.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.InjectDependencies();
@@ -10,5 +11,9 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
+
+app.MapEndpoints();
+
 app.Run();
+
+public partial class Program;
