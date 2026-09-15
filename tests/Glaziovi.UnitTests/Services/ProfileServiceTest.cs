@@ -202,8 +202,8 @@ public sealed class ProfileServiceTest
             .ThrowsAsync(exception);
 
         // Act
-        var actual = await Assert.ThrowsAsync<InvalidOperationException>(
-            () => _profileService.CreateProfileAsync(request, CancellationToken.None)
+        var actual = await Assert.ThrowsAsync<InvalidOperationException>(() =>
+            _profileService.CreateProfileAsync(request, CancellationToken.None)
         );
 
         // Assert
