@@ -1,0 +1,30 @@
+{
+  "realm": "glaziovi",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      { "name": "user" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "glaziovi-api",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "serviceAccountsEnabled": true,
+      "secret": "integration-client"
+    }
+  ],
+  "users": [
+    {
+      "username": "service-account-glaziovi-api",
+      "enabled": true,
+      "serviceAccountClientId": "glaziovi-api",
+      "realmRoles": ["default-roles-glaziovi", "admin"],
+      "clientRoles": {
+        "realm-management": ["manage-users", "view-users", "view-realm"]
+      }
+    }
+  ]
+}

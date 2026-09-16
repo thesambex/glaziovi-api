@@ -51,14 +51,16 @@ public sealed class ProfileService(
             }
 
             var user = new User(provisionResult.UserId!);
+
             await userRepository.AddAsync(user, ct);
+            await unitOfWork.SaveChangesAsync(ct);
 
             var personProfile = new PersonProfile(
                 user.Id,
                 createData.FirstName,
                 createData.LastName,
                 null
-            );
+            ) { User = user };
 
             await personProfileRepository.AddAsync(personProfile, ct);
 

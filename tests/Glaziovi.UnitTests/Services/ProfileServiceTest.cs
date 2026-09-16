@@ -89,7 +89,7 @@ public sealed class ProfileServiceTest
             Times.Once
         );
         _unitOfWork.Verify(x => x.BeginTransactionAsync(ct), Times.Once);
-        _unitOfWork.Verify(x => x.SaveChangesAsync(ct), Times.Once);
+        _unitOfWork.Verify(x => x.SaveChangesAsync(ct), Times.Exactly(2));
         _transaction.Verify(x => x.CommitAsync(ct), Times.Once);
         _transaction.Verify(x => x.RollbackAsync(It.IsAny<CancellationToken>()), Times.Never);
         _transaction.Verify(x => x.DisposeAsync(), Times.Once);
